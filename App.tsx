@@ -1,13 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-
 import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
+import { Amplify,  Auth } from 'aws-amplify'
+import awsconfig from './src/aws-exports'
+Amplify.configure(awsconfig)
+import { withAuthenticator } from 'aws-amplify-react-native';
 
-export default function App() {
+function App() {
   const isLoadingComplete = useCachedResources();
   const colorScheme = useColorScheme();
+//Auth.currentAuthenticatedUser().then(console.log)
 
   if (!isLoadingComplete) {
     return null;
@@ -20,3 +24,5 @@ export default function App() {
     );
   }
 }
+
+export default withAuthenticator(App);

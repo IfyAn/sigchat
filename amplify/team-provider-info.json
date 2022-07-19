@@ -1,0 +1,27 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-sigchat-staging-92020-authRole",
+      "UnauthRoleArn": "arn:aws:iam::746018881730:role/amplify-sigchat-staging-92020-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::746018881730:role/amplify-sigchat-staging-92020-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-sigchat-staging-92020-deployment",
+      "UnauthRoleName": "amplify-sigchat-staging-92020-unauthRole",
+      "StackName": "amplify-sigchat-staging-92020",
+      "StackId": "arn:aws:cloudformation:us-east-1:746018881730:stack/amplify-sigchat-staging-92020/d866dcb0-067a-11ed-a255-124e5ba9dc41",
+      "AmplifyAppId": "d3ysjtw305pxa",
+      "AuthTriggerTemplateURL": "https://s3.amazonaws.com/amplify-sigchat-staging-92020-deployment/amplify-cfn-templates/auth/auth-trigger-cloudformation-template.json"
+    },
+    "categories": {
+      "auth": {
+        "sigchat": {}
+      },
+      "function": {
+        "sigchatPostConfirmation": {
+          "deploymentBucketName": "amplify-sigchat-staging-92020-deployment",
+          "s3Key": "amplify-builds/sigchatPostConfirmation-764836337864354e3342-build.zip"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "resourceName": "s37ea261eb",
+  "policyUUID": "7ea261eb",
+  "bucketName": "sigchatdac442ac5c0a4b97871fe1ebaa6e909e",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}
