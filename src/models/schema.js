@@ -61,6 +61,13 @@ export const schema = {
                     "isRequired": false,
                     "attributes": []
                 },
+                "forUserId": {
+                    "name": "forUserId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -180,6 +187,34 @@ export const schema = {
                         "associatedWith": "chatRoom"
                     }
                 },
+                "Admin": {
+                    "name": "Admin",
+                    "isArray": false,
+                    "type": {
+                        "model": "User"
+                    },
+                    "isRequired": false,
+                    "attributes": [],
+                    "association": {
+                        "connectionType": "HAS_ONE",
+                        "associatedWith": "id",
+                        "targetName": "chatRoomAdminId"
+                    }
+                },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "imageUri": {
+                    "name": "imageUri",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
+                },
                 "createdAt": {
                     "name": "createdAt",
                     "isArray": false,
@@ -198,6 +233,13 @@ export const schema = {
                 },
                 "chatRoomLastMessageId": {
                     "name": "chatRoomLastMessageId",
+                    "isArray": false,
+                    "type": "ID",
+                    "isRequired": false,
+                    "attributes": []
+                },
+                "chatRoomAdminId": {
+                    "name": "chatRoomAdminId",
                     "isArray": false,
                     "type": "ID",
                     "isRequired": false,
@@ -429,5 +471,5 @@ export const schema = {
         }
     },
     "nonModels": {},
-    "version": "4453609479c5335f0367236ea2df7dd5"
+    "version": "fd6e8cce94ea661f1616ea3cec228aff"
 };
